@@ -50,12 +50,3 @@ tasks:
               agent_id: '1000002'
               to_user: 'MengJingNan'
               image: 'details_report.png'
-          # Telegram 配置参见 https://flexget.com/en/Plugins/Notifiers/telegram
-          - telegram:
-              bot_token: 'xxxxxxxx'
-              images:
-                - 'details_report.png'
-              recipients:
-                # Chat ID 通过 @raw_data_bot (https://t.me/raw_data_bot) 获取
-                - chat_id: 1694213419
-              socks_proxy: socks5://user:pass@host:port
