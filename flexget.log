@@ -1,0 +1,10 @@
+2025-11-14 18:26:20 INFO     matplotlib.font_manager                 generated new fontManager
+2025-11-14 18:26:21 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
+2025-11-14 18:26:22 VERBOSE  manager                       Creating new database /tmp/db-config.sqlite - DO NOT INTERRUPT ...
+2025-11-14 18:26:23 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
+2025-11-14 18:26:23 VERBOSE  details       sign_in         Produced 1 entries.
+2025-11-14 18:26:23 VERBOSE  task          sign_in         ACCEPTED: `m-team 2025-11-14` by accept_all plugin
+2025-11-14 18:26:23 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
+2025-11-14 18:26:23 INFO     flexget.plugins.ptsites.executor                 m-team 2025-11-14 SUCCESS
+2025-11-14 18:26:23 INFO     flexget.plugins.ptsites.executor                 site_name: m-team, details: {'uploaded': '1444223009125 B', 'downloaded': '78524192128 B', 'share_ratio': '18.392', 'points': '1691.5', 'seeding': '13', 'leeching': '0', 'hr': '*'}
+2025-11-14 18:26:24 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1763115984560333180788459], from ip: 47.243.51.99, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
