@@ -1,30 +1,22 @@
 tasks:
   sign_in:
     auto_sign_in:
-      user-agent: Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36
-      # 推荐值：5。多线程各站点日志会乱序，如需查看日志设为 1。默认 1
-      # 太小程序运行时间延长，增加阿里云 CU 时间，导致费用增加，太大增加资源消耗
-      max_workers: 5
-      # 设为 no 跳过未读信息获取。默认 no
-      get_messages: no
-      # 设为 no 跳过获取统计。默认 yes
-      get_details: yes
-      # 百度智能云文字识别应用参数
+      user-agent: '{? headers.user_agent ?}'
+      max_workers: 1
       aipocr:
         app_id: '120827608'
         api_key: 'Fl6xDdcfeZRL6OBcyZEf8dcn'
         secret_key: 'pAXatoHeeQdjxHkSMq2P0dOPTaVJOvO5'
       sites:
-        # 站名: cookie
-        m-team: 019a81a4-2578-7ac2-a87e-b33953d60d07
-      
+        m-team:
+          key: '019a81a4-2578-7ac2-a87e-b33953d60d07'
     accept_all: yes
     seen:
       fields:
         - title
     notify:
       task:
-        always_send: true
+        always_send: yes
         message: |+
           {%- if task.accepted -%}
           {%- for group in task.accepted|groupby('task') -%}
@@ -50,20 +42,11 @@ tasks:
           {% endif %}
           {%- endfor -%}
           {%- endfor -%}
-        # 填写要使用的推送渠道，移除不需要的
+        # 填写要使用的推送渠道，删去不需要的
         via:
           - wecom:
               corp_id: 'wwf700601ec0cdf87c'
               corp_secret: 'Z5jy2oIOh14QSatD3tUL4dYV8pcHBSzyDsyN5_q6r3A'
               agent_id: '1000002'
               to_user: 'MengJingNan'
-              image: details_report.png
-          # Telegram 配置参见 https://flexget.com/en/Plugins/Notifiers/telegram
-          - telegram:
-              # 需替换成你的
-              bot_token: 5247092814:AAHmk7qdOMXEtZtGrnrzNxcoOazKNM51Atg
-              images:
-                - details_report.png
-              recipients:
-                # Chat ID 通过 @raw_data_bot (https://t.me/raw_data_bot) 获取
-                - chat_id: 1694213419
+              image: 'details_report.png'
