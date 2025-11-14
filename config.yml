@@ -16,7 +16,7 @@ tasks:
         secret_key: 'pAXatoHeeQdjxHkSMq2P0dOPTaVJOvO5'
       sites:
         # 站名: cookie
-        m-team: 019a81a4-2578-7ac2-a87e-b33953d60d07
+        m-team: '019a81a4-2578-7ac2-a87e-b33953d60d07'
       
     accept_all: yes
     seen:
