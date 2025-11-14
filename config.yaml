@@ -53,10 +53,10 @@ tasks:
         # 填写要使用的推送渠道，移除不需要的
         via:
           - wecom:
-              corp_id: ''
-              corp_secret: ''
-              agent_id: ''
-              to_user: ''
+              corp_id: 'wwf700601ec0cdf87c'
+              corp_secret: 'Z5jy2oIOh14QSatD3tUL4dYV8pcHBSzyDsyN5_q6r3A'
+              agent_id: '1000002'
+              to_user: 'MengJingNan'
               image: details_report.png
           # Telegram 配置参见 https://flexget.com/en/Plugins/Notifiers/telegram
           - telegram:
