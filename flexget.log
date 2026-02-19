@@ -1,10 +1,155 @@
-2026-02-19 02:00:04 INFO     matplotlib.font_manager                 generated new fontManager
-2026-02-19 02:00:05 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
-2026-02-19 02:00:07 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
-2026-02-19 02:00:07 VERBOSE  details       sign_in         Produced 1 entries.
-2026-02-19 02:00:07 VERBOSE  task          sign_in         ACCEPTED: `m-team 2026-02-19` by accept_all plugin
-2026-02-19 02:00:07 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
-2026-02-19 02:00:12 INFO     flexget.plugins.ptsites.executor                 m-team 2026-02-19 SUCCESS
-2026-02-19 02:00:15 INFO     flexget.plugins.ptsites.executor                 site_name: m-team, details: {'uploaded': '20554974640823 B', 'downloaded': '675998291730 B', 'share_ratio': '30.407', 'points': '87071.3', 'seeding': '8', 'leeching': '0', 'hr': '*'}
-2026-02-19 02:00:16 INFO     wecom         sign_in         saving updated access_token to db
-2026-02-19 02:00:16 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1771437616550092389310329], from ip: 8.210.245.194, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
+2026-02-20 02:00:11 INFO     matplotlib.font_manager                 generated new fontManager
+2026-02-20 02:00:14 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
+2026-02-20 02:00:18 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
+2026-02-20 02:00:18 VERBOSE  details       sign_in         Produced 1 entries.
+2026-02-20 02:00:18 VERBOSE  task          sign_in         ACCEPTED: `m-team 2026-02-20` by accept_all plugin
+2026-02-20 02:00:18 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
+2026-02-20 02:00:18 ERROR    entry                         Failed m-team 2026-02-20 (Sign_in=> url: https://api.m-team.io/api/member/profile detected CloudFlare DDoS-GUARD. (None))
+2026-02-20 02:00:18 INFO     task                          Plugin retry_failed has requested task to be ran again after execution has completed.
+2026-02-20 02:00:18 VERBOSE  task                          FAILED: `m-team 2026-02-20` by auto_sign_in plugin because sign_in=> url: https://api.m-team.io/api/member/profile detected CloudFlare DDoS-GUARD. (None)
+2026-02-20 02:00:18 ERROR    flexget.plugins.auto_sign_in sign_in         Expecting value: line 1 column 1 (char 0)
+Traceback (most recent call last):
+
+  File "/opt/python/requests/models.py", line 976, in json
+    return complexjson.loads(self.text, **kwargs)
+           │           │     │    │       └ {}
+           │           │     │    └ <property object at 0x7fc9f6d05940>
+           │           │     └ <Response [502]>
+           │           └ <function loads at 0x7fc9f9795440>
+           └ <module 'json' from '/var/fc/lang/python3.12/lib/python3.12/json/__init__.py'>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/json/__init__.py", line 346, in loads
+    return _default_decoder.decode(s)
+           │                │      └ '<!DOCTYPE html>\n<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n<!--[if IE 7]>    <html class="...
+           │                └ <function JSONDecoder.decode at 0x7fc9f9794e00>
+           └ <json.decoder.JSONDecoder object at 0x7fc9f99ead20>
+  File "/var/fc/lang/python3.12/lib/python3.12/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+               │    │          │      │  └ '<!DOCTYPE html>\n<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n<!--[if IE 7]>    <html class="...
+               │    │          │      └ <built-in method match of re.Pattern object at 0x7fc9f974e260>
+               │    │          └ '<!DOCTYPE html>\n<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n<!--[if IE 7]>    <html class="...
+               │    └ <function JSONDecoder.raw_decode at 0x7fc9f9794ea0>
+               └ <json.decoder.JSONDecoder object at 0x7fc9f99ead20>
+  File "/var/fc/lang/python3.12/lib/python3.12/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+          │                                  └ '<!DOCTYPE html>\n<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en-US"> <![endif]-->\n<!--[if IE 7]>    <html class="...
+          └ <class 'json.decoder.JSONDecodeError'>
+
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/var/fc/lang/python3.12/lib/python3.12/threading.py", line 1030, in _bootstrap
+    self._bootstrap_inner()
+    │    └ <function Thread._bootstrap_inner at 0x7fc9f9873740>
+    └ <Thread(task_queue, started daemon 140505233520384)>
+  File "/var/fc/lang/python3.12/lib/python3.12/threading.py", line 1073, in _bootstrap_inner
+    self.run()
+    │    └ <function Thread.run at 0x7fc9f9873420>
+    └ <Thread(task_queue, started daemon 140505233520384)>
+  File "/var/fc/lang/python3.12/lib/python3.12/threading.py", line 1010, in run
+    self._target(*self._args, **self._kwargs)
+    │    │        │    │        │    └ {}
+    │    │        │    │        └ <Thread(task_queue, started daemon 140505233520384)>
+    │    │        │    └ ()
+    │    │        └ <Thread(task_queue, started daemon 140505233520384)>
+    │    └ <bound method TaskQueue.run of <flexget.task_queue.TaskQueue object at 0x7fc9d9ba74a0>>
+    └ <Thread(task_queue, started daemon 140505233520384)>
+
+  File "/opt/python/flexget/task_queue.py", line 51, in run
+    self.current_task.execute()
+    │    │            └ <function Task.execute at 0x7fc9f64f6de0>
+    │    └ <flexget.task.Task object at 0x7fc9d95931d0>
+    └ <flexget.task_queue.TaskQueue object at 0x7fc9d9ba74a0>
+
+  File "/opt/python/flexget/task.py", line 93, in wrapper
+    return func(self, *args, **kw)
+           │    │      │       └ {}
+           │    │      └ ()
+           │    └ <flexget.task.Task object at 0x7fc9d95931d0>
+           └ <function Task.execute at 0x7fc9f64f6d40>
+
+  File "/opt/python/flexget/task.py", line 705, in execute
+    self._execute()
+    │    └ <function Task._execute at 0x7fc9f64f6ca0>
+    └ <flexget.task.Task object at 0x7fc9d95931d0>
+
+  File "/opt/python/flexget/task.py", line 676, in _execute
+    self.__run_task_phase(phase)
+    │                     └ 'output'
+    └ <flexget.task.Task object at 0x7fc9d95931d0>
+
+  File "/opt/python/flexget/task.py", line 508, in __run_task_phase
+    response = self.__run_plugin(plugin, phase, args)
+               │                 │       │      └ (<flexget.task.Task object at 0x7fc9d95931d0>, {'user-agent': '{? headers.user_agent ?}', 'max_workers': 1, 'aipocr': {'app_i...
+               │                 │       └ 'output'
+               │                 └ <PluginInfo(name=auto_sign_in)>
+               └ <flexget.task.Task object at 0x7fc9d95931d0>
+
+  File "/opt/python/flexget/task.py", line 541, in __run_plugin
+    result = method(*args, **kwargs)
+             │       │       └ {}
+             │       └ (<flexget.task.Task object at 0x7fc9d95931d0>, {'user-agent': '{? headers.user_agent ?}', 'max_workers': 1, 'aipocr': {'app_i...
+             └ <Event(name=plugin.auto_sign_in.output,func=on_task_output,priority=128)>
+
+  File "/opt/python/flexget/event.py", line 24, in __call__
+    return self.func(*args, **kwargs)
+           │    │     │       └ {}
+           │    │     └ (<flexget.task.Task object at 0x7fc9d95931d0>, {'user-agent': '{? headers.user_agent ?}', 'max_workers': 1, 'aipocr': {'app_i...
+           │    └ <bound method PluginAutoSignIn.on_task_output of <flexget.plugins.auto_sign_in.PluginAutoSignIn object at 0x7fc9defa5e80>>
+           └ <Event(name=plugin.auto_sign_in.output,func=on_task_output,priority=128)>
+
+> File "/tmp/plugins/auto_sign_in.py", line 84, in on_task_output
+    feature.result()
+    │       └ <function Future.result at 0x7fc9f959e0c0>
+    └ <Future at 0x7fc9d95ea690 state=finished raised JSONDecodeError>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/concurrent/futures/_base.py", line 456, in result
+    return self.__get_result()
+           └ None
+  File "/var/fc/lang/python3.12/lib/python3.12/concurrent/futures/_base.py", line 401, in __get_result
+    raise self._exception
+          └ None
+  File "/var/fc/lang/python3.12/lib/python3.12/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             │        │            └ None
+             │        └ None
+             └ None
+
+  File "/tmp/plugins/ptsites/executor.py", line 71, in sign_in
+    site_object.sign_in(entry, config)
+    │           │       │      └ {'user-agent': '{? headers.user_agent ?}', 'max_workers': 1, 'aipocr': {'app_id': '120827608', 'api_key': 'Fl6xDdcfeZRL6OBcyZ...
+    │           │       └ <Entry(title=m-team 2026-02-20,state=failed)>
+    │           └ <function PrivateTorrent.sign_in at 0x7fc9dd4bc220>
+    └ <flexget.plugins.ptsites.sites.m-team.MainClass object at 0x7fc9d95e9f10>
+
+  File "/tmp/plugins/ptsites/schema/private_torrent.py", line 80, in sign_in
+    last_response = work.method(entry, config, work, last_content)
+                    │    │      │      │       │     └ None
+                    │    │      │      │       └ <flexget.plugins.ptsites.base.work.Work object at 0x7fc9d95ea780>
+                    │    │      │      └ {'user-agent': '{? headers.user_agent ?}', 'max_workers': 1, 'aipocr': {'app_id': '120827608', 'api_key': 'Fl6xDdcfeZRL6OBcyZ...
+                    │    │      └ <Entry(title=m-team 2026-02-20,state=failed)>
+                    │    └ <bound method MainClass.sign_in_by_post of <flexget.plugins.ptsites.sites.m-team.MainClass object at 0x7fc9d95e9f10>>
+                    └ <flexget.plugins.ptsites.base.work.Work object at 0x7fc9d95ea780>
+
+  File "/tmp/plugins/ptsites/sites/m-team.py", line 87, in sign_in_by_post
+    response_json = response.json()
+                    │        └ <function Response.json at 0x7fc9f6cf79c0>
+                    └ <Response [502]>
+
+  File "/opt/python/requests/models.py", line 980, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+          └ <class 'requests.exceptions.JSONDecodeError'>
+
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+2026-02-20 02:00:19 INFO     wecom         sign_in         saving updated access_token to db
+2026-02-20 02:00:19 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1771524019253803433054094], from ip: 47.242.112.18, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
+2026-02-20 02:00:19 INFO     task          sign_in         Rerunning the task in case better resolution can be achieved.
+2026-02-20 02:00:19 VERBOSE  details       sign_in         Produced 1 entries.
+2026-02-20 02:00:19 VERBOSE  task          sign_in         REJECTED: `m-team 2026-02-20` by retry_failed plugin because waiting before retrying entry which has failed in the past. (failure reason: Sign_in=> url: https://api.m-team.io/api/member/profile detected CloudFlare DDoS-GUARD. (None))
+2026-02-20 02:00:19 VERBOSE  details       sign_in         Summary - Accepted: 0 (Rejected: 1 Undecided: 0 Failed: 0)
+2026-02-20 02:00:19 VERBOSE  notify        sign_in         Successfully sent a notification to `wecom`
