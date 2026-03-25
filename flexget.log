@@ -1,10 +1,10 @@
-2026-03-25 02:00:05 INFO     matplotlib.font_manager                 generated new fontManager
-2026-03-25 02:00:06 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
-2026-03-25 02:00:08 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
-2026-03-25 02:00:08 VERBOSE  details       sign_in         Produced 1 entries.
-2026-03-25 02:00:08 VERBOSE  task          sign_in         ACCEPTED: `m-team 2026-03-25` by accept_all plugin
-2026-03-25 02:00:08 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
-2026-03-25 02:00:13 INFO     flexget.plugins.ptsites.executor                 m-team 2026-03-25 SUCCESS
-2026-03-25 02:00:16 INFO     flexget.plugins.ptsites.executor                 site_name: m-team, details: {'uploaded': '24928719027619 B', 'downloaded': '1103797235602 B', 'share_ratio': '22.585', 'points': '117375.9', 'seeding': '7', 'leeching': '0', 'hr': '*'}
-2026-03-25 02:00:17 INFO     wecom         sign_in         saving updated access_token to db
-2026-03-25 02:00:17 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1774375217442853735795758], from ip: 47.242.95.37, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
+2026-03-26 02:00:04 INFO     matplotlib.font_manager                 generated new fontManager
+2026-03-26 02:00:05 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
+2026-03-26 02:00:06 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
+2026-03-26 02:00:06 VERBOSE  details       sign_in         Produced 1 entries.
+2026-03-26 02:00:06 VERBOSE  task          sign_in         ACCEPTED: `m-team 2026-03-26` by accept_all plugin
+2026-03-26 02:00:06 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
+2026-03-26 02:00:13 INFO     flexget.plugins.ptsites.executor                 m-team 2026-03-26 SUCCESS
+2026-03-26 02:00:16 INFO     flexget.plugins.ptsites.executor                 site_name: m-team, details: {'uploaded': '25321110825235 B', 'downloaded': '1103797235602 B', 'share_ratio': '22.94', 'points': '118337.0', 'seeding': '8', 'leeching': '0', 'hr': '*'}
+2026-03-26 02:00:16 INFO     wecom         sign_in         saving updated access_token to db
+2026-03-26 02:00:17 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1774461616445592115991377], from ip: 47.238.69.242, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
