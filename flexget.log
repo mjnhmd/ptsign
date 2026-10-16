@@ -1,58 +1,59 @@
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.conftest` failed to import dependencies
+2026-10-17 02:00:10 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.conftest` failed to import dependencies
 Traceback (most recent call last):
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
     main()
-    └ <function main at 0x7fb6b0b63880>
+    └ <function main at 0x7fbc892a7880>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
     handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
     succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
                     │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
     result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
 
   File "/code/index.py", line 15, in handler
     asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
     └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
 
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
     return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
     return self._loop.run_until_complete(task)
            │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
            │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
+    │      └ <function Handle._run at 0x7fbc88982b60>
     └ <Handle Task.task_wakeup(<Future finished result=True>)>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
     self._context.run(self._callback, *self._args)
@@ -65,39 +66,39 @@ Traceback (most recent call last):
 
   File "/code/index.py", line 26, in main
     flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
+    │       └ <function main at 0x7fbc87ca7ec0>
     └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
 
   File "/opt/python/flexget/__init__.py", line 59, in main
     manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 381, in start
     self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 225, in initialize
     plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
+    │      └ <function load_plugins at 0x7fbc867a3740>
     └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
 
   File "/opt/python/flexget/plugin.py", line 541, in load_plugins
     _load_plugins_from_dirs(extra_plugins)
     │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
 
   File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
     _import_plugin(module_name, plugin_path)
     │              │            └ PosixPath('/tmp/plugins/tests/conftest.py')
     │              └ 'flexget.plugins.tests.conftest'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
+    └ <function _import_plugin at 0x7fbc867a34c0>
 
 > File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
     import_module(module_name)
     │             └ 'flexget.plugins.tests.conftest'
-    └ <function import_module at 0x7fb6b0bb4a40>
+    └ <function import_module at 0x7fbc892f8a40>
 
   File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -105,7 +106,7 @@ Traceback (most recent call last):
            │          │           │    │        └ None
            │          │           │    └ 0
            │          │           └ 'flexget.plugins.tests.conftest'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
            └ <module '_frozen_importlib' (frozen)>
   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
@@ -118,62 +119,61 @@ Traceback (most recent call last):
     import pytest
 
 ModuleNotFoundError: No module named 'pytest'
-2026-10-16 02:00:10 INFO     flexget.plugins.ptsites._version                 flexget_qbittorrent_mod v0.8.13dev
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.integration.test_sign_in` failed to import dependencies
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.integration.test_sign_in` failed to import dependencies
 Traceback (most recent call last):
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
     main()
-    └ <function main at 0x7fb6b0b63880>
+    └ <function main at 0x7fbc892a7880>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
     handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
     succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
                     │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
     result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
 
   File "/code/index.py", line 15, in handler
     asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
     └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
 
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
     return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
     return self._loop.run_until_complete(task)
            │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
            │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
+    │      └ <function Handle._run at 0x7fbc88982b60>
     └ <Handle Task.task_wakeup(<Future finished result=True>)>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
     self._context.run(self._callback, *self._args)
@@ -186,39 +186,39 @@ Traceback (most recent call last):
 
   File "/code/index.py", line 26, in main
     flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
+    │       └ <function main at 0x7fbc87ca7ec0>
     └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
 
   File "/opt/python/flexget/__init__.py", line 59, in main
     manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 381, in start
     self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 225, in initialize
     plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
+    │      └ <function load_plugins at 0x7fbc867a3740>
     └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
 
   File "/opt/python/flexget/plugin.py", line 541, in load_plugins
     _load_plugins_from_dirs(extra_plugins)
     │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
 
   File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
     _import_plugin(module_name, plugin_path)
     │              │            └ PosixPath('/tmp/plugins/tests/integration/test_sign_in.py')
     │              └ 'flexget.plugins.tests.integration.test_sign_in'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
+    └ <function _import_plugin at 0x7fbc867a34c0>
 
 > File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
     import_module(module_name)
     │             └ 'flexget.plugins.tests.integration.test_sign_in'
-    └ <function import_module at 0x7fb6b0bb4a40>
+    └ <function import_module at 0x7fbc892f8a40>
 
   File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -226,7 +226,7 @@ Traceback (most recent call last):
            │          │           │    │        └ None
            │          │           │    └ 0
            │          │           └ 'flexget.plugins.tests.integration.test_sign_in'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
            └ <module '_frozen_importlib' (frozen)>
   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
@@ -239,61 +239,61 @@ Traceback (most recent call last):
     import pytest
 
 ModuleNotFoundError: No module named 'pytest'
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_tjupt` failed to import dependencies
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_executor` failed to import dependencies
 Traceback (most recent call last):
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
     main()
-    └ <function main at 0x7fb6b0b63880>
+    └ <function main at 0x7fbc892a7880>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
     handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
     succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
                     │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
     result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
 
   File "/code/index.py", line 15, in handler
     asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
     └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
 
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
     return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
     return self._loop.run_until_complete(task)
            │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
            │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
+    │      └ <function Handle._run at 0x7fbc88982b60>
     └ <Handle Task.task_wakeup(<Future finished result=True>)>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
     self._context.run(self._callback, *self._args)
@@ -306,399 +306,39 @@ Traceback (most recent call last):
 
   File "/code/index.py", line 26, in main
     flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
+    │       └ <function main at 0x7fbc87ca7ec0>
     └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
 
   File "/opt/python/flexget/__init__.py", line 59, in main
     manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 381, in start
     self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 225, in initialize
     plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
+    │      └ <function load_plugins at 0x7fbc867a3740>
     └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
 
   File "/opt/python/flexget/plugin.py", line 541, in load_plugins
     _load_plugins_from_dirs(extra_plugins)
     │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
-
-  File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
-    _import_plugin(module_name, plugin_path)
-    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_tjupt.py')
-    │              └ 'flexget.plugins.tests.unit.test_tjupt'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
-
-> File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
-    import_module(module_name)
-    │             └ 'flexget.plugins.tests.unit.test_tjupt'
-    └ <function import_module at 0x7fb6b0bb4a40>
-
-  File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           │          │           │    │        │        └ 0
-           │          │           │    │        └ None
-           │          │           │    └ 0
-           │          │           └ 'flexget.plugins.tests.unit.test_tjupt'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
-           └ <module '_frozen_importlib' (frozen)>
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-
-  File "/tmp/plugins/tests/unit/test_tjupt.py", line 5, in <module>
-    from ptsites.trackers.tjupt import compareHash, toHash
-
-ModuleNotFoundError: No module named 'ptsites'
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_details_report` failed to import dependencies
-Traceback (most recent call last):
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
-    main()
-    └ <function main at 0x7fb6b0b63880>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
-    handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
-    succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
-                    │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
-    result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
-
-  File "/code/index.py", line 15, in handler
-    asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
-    └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
-
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
-    return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
-           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
-    self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
-    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
-    self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
-    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
-    handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
-    └ <Handle Task.task_wakeup(<Future finished result=True>)>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
-    self._context.run(self._callback, *self._args)
-    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
-    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=True>)>
-    │    │            │    └ <member '_callback' of 'Handle' objects>
-    │    │            └ <Handle Task.task_wakeup(<Future finished result=True>)>
-    │    └ <member '_context' of 'Handle' objects>
-    └ <Handle Task.task_wakeup(<Future finished result=True>)>
-
-  File "/code/index.py", line 26, in main
-    flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
-    └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
-
-  File "/opt/python/flexget/__init__.py", line 59, in main
-    manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
-
-  File "/opt/python/flexget/manager.py", line 381, in start
-    self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
-
-  File "/opt/python/flexget/manager.py", line 225, in initialize
-    plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
-    └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
-
-  File "/opt/python/flexget/plugin.py", line 541, in load_plugins
-    _load_plugins_from_dirs(extra_plugins)
-    │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
-
-  File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
-    _import_plugin(module_name, plugin_path)
-    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_details_report.py')
-    │              └ 'flexget.plugins.tests.unit.test_details_report'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
-
-> File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
-    import_module(module_name)
-    │             └ 'flexget.plugins.tests.unit.test_details_report'
-    └ <function import_module at 0x7fb6b0bb4a40>
-
-  File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           │          │           │    │        │        └ 0
-           │          │           │    │        └ None
-           │          │           │    └ 0
-           │          │           └ 'flexget.plugins.tests.unit.test_details_report'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
-           └ <module '_frozen_importlib' (frozen)>
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-
-  File "/tmp/plugins/tests/unit/test_details_report.py", line 1, in <module>
-    import pytest
-
-ModuleNotFoundError: No module named 'pytest'
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_qbittorrent_plugin` failed to import dependencies
-Traceback (most recent call last):
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
-    main()
-    └ <function main at 0x7fb6b0b63880>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
-    handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
-    succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
-                    │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
-    result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
-
-  File "/code/index.py", line 15, in handler
-    asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
-    └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
-
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
-    return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
-           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
-    self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
-    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
-    self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
-    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
-    handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
-    └ <Handle Task.task_wakeup(<Future finished result=True>)>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
-    self._context.run(self._callback, *self._args)
-    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
-    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=True>)>
-    │    │            │    └ <member '_callback' of 'Handle' objects>
-    │    │            └ <Handle Task.task_wakeup(<Future finished result=True>)>
-    │    └ <member '_context' of 'Handle' objects>
-    └ <Handle Task.task_wakeup(<Future finished result=True>)>
-
-  File "/code/index.py", line 26, in main
-    flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
-    └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
-
-  File "/opt/python/flexget/__init__.py", line 59, in main
-    manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
-
-  File "/opt/python/flexget/manager.py", line 381, in start
-    self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
-
-  File "/opt/python/flexget/manager.py", line 225, in initialize
-    plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
-    └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
-
-  File "/opt/python/flexget/plugin.py", line 541, in load_plugins
-    _load_plugins_from_dirs(extra_plugins)
-    │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
-
-  File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
-    _import_plugin(module_name, plugin_path)
-    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_qbittorrent_plugin.py')
-    │              └ 'flexget.plugins.tests.unit.test_qbittorrent_plugin'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
-
-> File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
-    import_module(module_name)
-    │             └ 'flexget.plugins.tests.unit.test_qbittorrent_plugin'
-    └ <function import_module at 0x7fb6b0bb4a40>
-
-  File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-           │          │           │    │        │        └ 0
-           │          │           │    │        └ None
-           │          │           │    └ 0
-           │          │           └ 'flexget.plugins.tests.unit.test_qbittorrent_plugin'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
-           └ <module '_frozen_importlib' (frozen)>
-  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
-  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
-  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
-  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
-  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
-  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
-
-  File "/tmp/plugins/tests/unit/test_qbittorrent_plugin.py", line 1, in <module>
-    from ptsites.qbittorrent.operations import QBittorrentOperationsMixin
-
-ModuleNotFoundError: No module named 'ptsites'
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_executor` failed to import dependencies
-Traceback (most recent call last):
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
-    main()
-    └ <function main at 0x7fb6b0b63880>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
-    handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
-    succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
-                    │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
-
-  File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
-    result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
-
-  File "/code/index.py", line 15, in handler
-    asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
-    └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
-
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
-    return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
-    return self._loop.run_until_complete(task)
-           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
-           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
-    self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
-    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
-    self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
-    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
-    handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
-    └ <Handle Task.task_wakeup(<Future finished result=True>)>
-  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
-    self._context.run(self._callback, *self._args)
-    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
-    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=True>)>
-    │    │            │    └ <member '_callback' of 'Handle' objects>
-    │    │            └ <Handle Task.task_wakeup(<Future finished result=True>)>
-    │    └ <member '_context' of 'Handle' objects>
-    └ <Handle Task.task_wakeup(<Future finished result=True>)>
-
-  File "/code/index.py", line 26, in main
-    flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
-    └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
-
-  File "/opt/python/flexget/__init__.py", line 59, in main
-    manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
-
-  File "/opt/python/flexget/manager.py", line 381, in start
-    self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
-
-  File "/opt/python/flexget/manager.py", line 225, in initialize
-    plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
-    └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
-
-  File "/opt/python/flexget/plugin.py", line 541, in load_plugins
-    _load_plugins_from_dirs(extra_plugins)
-    │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
 
   File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
     _import_plugin(module_name, plugin_path)
     │              │            └ PosixPath('/tmp/plugins/tests/unit/test_executor.py')
     │              └ 'flexget.plugins.tests.unit.test_executor'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
+    └ <function _import_plugin at 0x7fbc867a34c0>
 
 > File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
     import_module(module_name)
     │             └ 'flexget.plugins.tests.unit.test_executor'
-    └ <function import_module at 0x7fb6b0bb4a40>
+    └ <function import_module at 0x7fbc892f8a40>
 
   File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -706,7 +346,7 @@ Traceback (most recent call last):
            │          │           │    │        └ None
            │          │           │    └ 0
            │          │           └ 'flexget.plugins.tests.unit.test_executor'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
            └ <module '_frozen_importlib' (frozen)>
   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
@@ -719,61 +359,61 @@ Traceback (most recent call last):
     import pytest
 
 ModuleNotFoundError: No module named 'pytest'
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_dmhy` failed to import dependencies
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_tjupt` failed to import dependencies
 Traceback (most recent call last):
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
     main()
-    └ <function main at 0x7fb6b0b63880>
+    └ <function main at 0x7fbc892a7880>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
     handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
     succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
                     │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
     result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
 
   File "/code/index.py", line 15, in handler
     asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
     └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
 
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
     return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
     return self._loop.run_until_complete(task)
            │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
            │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
+    │      └ <function Handle._run at 0x7fbc88982b60>
     └ <Handle Task.task_wakeup(<Future finished result=True>)>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
     self._context.run(self._callback, *self._args)
@@ -786,47 +426,47 @@ Traceback (most recent call last):
 
   File "/code/index.py", line 26, in main
     flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
+    │       └ <function main at 0x7fbc87ca7ec0>
     └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
 
   File "/opt/python/flexget/__init__.py", line 59, in main
     manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 381, in start
     self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 225, in initialize
     plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
+    │      └ <function load_plugins at 0x7fbc867a3740>
     └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
 
   File "/opt/python/flexget/plugin.py", line 541, in load_plugins
     _load_plugins_from_dirs(extra_plugins)
     │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
 
   File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
     _import_plugin(module_name, plugin_path)
-    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_dmhy.py')
-    │              └ 'flexget.plugins.tests.unit.test_dmhy'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
+    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_tjupt.py')
+    │              └ 'flexget.plugins.tests.unit.test_tjupt'
+    └ <function _import_plugin at 0x7fbc867a34c0>
 
 > File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
     import_module(module_name)
-    │             └ 'flexget.plugins.tests.unit.test_dmhy'
-    └ <function import_module at 0x7fb6b0bb4a40>
+    │             └ 'flexget.plugins.tests.unit.test_tjupt'
+    └ <function import_module at 0x7fbc892f8a40>
 
   File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
            │          │           │    │        │        └ 0
            │          │           │    │        └ None
            │          │           │    └ 0
-           │          │           └ 'flexget.plugins.tests.unit.test_dmhy'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
+           │          │           └ 'flexget.plugins.tests.unit.test_tjupt'
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
            └ <module '_frozen_importlib' (frozen)>
   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
@@ -835,65 +475,65 @@ Traceback (most recent call last):
   File "<frozen importlib._bootstrap_external>", line 995, in exec_module
   File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
 
-  File "/tmp/plugins/tests/unit/test_dmhy.py", line 9, in <module>
-    from ptsites.base.entry import SignInEntry
+  File "/tmp/plugins/tests/unit/test_tjupt.py", line 5, in <module>
+    from ptsites.trackers.tjupt import compareHash, toHash
 
 ModuleNotFoundError: No module named 'ptsites'
-2026-10-16 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_myanonamouse` failed to import dependencies
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_myanonamouse` failed to import dependencies
 Traceback (most recent call last):
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
     main()
-    └ <function main at 0x7fb6b0b63880>
+    └ <function main at 0x7fbc892a7880>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
     handler.handle_request()
-    │       └ <function FCHandler.handle_request at 0x7fb6b0b62340>
-    └ <__main__.FCHandler object at 0x7fb6b0d91400>
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
     succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
-                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-                    │                       │    │              │                └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-                    │                       │    │              └ <function handler at 0x7fb6b0b63ba0>
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
                     │                       │    └ 0
-                    │                       └ <__main__.FCHandler object at 0x7fb6b0d91400>
-                    └ <function execute_request_handler at 0x7fb6b0b61da0>
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
 
   File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
     result = request_handler(req, ctx)
-             │               │    └ <fc_rapis_context.FCContext object at 0x7fb6b0d913a0>
-             │               └ b'{"triggerTime":"2026-10-15T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
-             └ <function handler at 0x7fb6b0b63ba0>
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
 
   File "/code/index.py", line 15, in handler
     asyncio.run(main())
-    │       │   └ <function main at 0x7fb6af79b100>
-    │       └ <function run at 0x7fb6b0085a80>
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
     └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
 
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
     return runner.run(main)
-           │      │   └ <coroutine object main at 0x7fb6ada21c40>
-           │      └ <function Runner.run at 0x7fb6b0094d60>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
     return self._loop.run_until_complete(task)
            │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
-           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fb6b0092980>
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
            │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
-           └ <asyncio.runners.Runner object at 0x7fb6b0d90fb0>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
     self.run_forever()
-    │    └ <function BaseEventLoop.run_forever at 0x7fb6b00928e0>
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
     self._run_once()
-    │    └ <function BaseEventLoop._run_once at 0x7fb6b0094720>
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
     └ <_UnixSelectorEventLoop running=True closed=False debug=False>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
     handle._run()
-    │      └ <function Handle._run at 0x7fb6b023ab60>
+    │      └ <function Handle._run at 0x7fbc88982b60>
     └ <Handle Task.task_wakeup(<Future finished result=True>)>
   File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
     self._context.run(self._callback, *self._args)
@@ -906,39 +546,39 @@ Traceback (most recent call last):
 
   File "/code/index.py", line 26, in main
     flexget.main(['execute'])
-    │       └ <function main at 0x7fb6af563ec0>
+    │       └ <function main at 0x7fbc87ca7ec0>
     └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
 
   File "/opt/python/flexget/__init__.py", line 59, in main
     manager.start()
-    │       └ <function Manager.start at 0x7fb6ad8a3c40>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 381, in start
     self.initialize()
-    │    └ <function Manager.initialize at 0x7fb6ad8a39c0>
-    └ <flexget.manager.Manager object at 0x7fb6ada196a0>
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
 
   File "/opt/python/flexget/manager.py", line 225, in initialize
     plugin.load_plugins(
-    │      └ <function load_plugins at 0x7fb6ae0b3740>
+    │      └ <function load_plugins at 0x7fbc867a3740>
     └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
 
   File "/opt/python/flexget/plugin.py", line 541, in load_plugins
     _load_plugins_from_dirs(extra_plugins)
     │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
-    └ <function _load_plugins_from_dirs at 0x7fb6ae0b3560>
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
 
   File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
     _import_plugin(module_name, plugin_path)
     │              │            └ PosixPath('/tmp/plugins/tests/unit/test_myanonamouse.py')
     │              └ 'flexget.plugins.tests.unit.test_myanonamouse'
-    └ <function _import_plugin at 0x7fb6ae0b34c0>
+    └ <function _import_plugin at 0x7fbc867a34c0>
 
 > File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
     import_module(module_name)
     │             └ 'flexget.plugins.tests.unit.test_myanonamouse'
-    └ <function import_module at 0x7fb6b0bb4a40>
+    └ <function import_module at 0x7fbc892f8a40>
 
   File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
     return _bootstrap._gcd_import(name[level:], package, level)
@@ -946,7 +586,7 @@ Traceback (most recent call last):
            │          │           │    │        └ None
            │          │           │    └ 0
            │          │           └ 'flexget.plugins.tests.unit.test_myanonamouse'
-           │          └ <function _gcd_import at 0x7fb6b0d7c0e0>
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
            └ <module '_frozen_importlib' (frozen)>
   File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
   File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
@@ -959,11 +599,371 @@ Traceback (most recent call last):
     from ptsites.trackers.myanonamouse import MainClass
 
 ModuleNotFoundError: No module named 'ptsites'
-2026-10-16 02:00:13 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
-2026-10-16 02:00:13 VERBOSE  details       sign_in         Produced 1 entries.
-2026-10-16 02:00:13 VERBOSE  task          sign_in         ACCEPTED: `m-team 2026-10-16` by accept_all plugin
-2026-10-16 02:00:13 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
-2026-10-16 02:00:13 INFO     flexget.plugins.ptsites.executor                 m-team 2026-10-16 SUCCESS
-2026-10-16 02:00:14 INFO     flexget.plugins.ptsites.executor                 site_name: m-team, details: {'uploaded': '55106480640969 B', 'downloaded': '3984600601147 B', 'share_ratio': '13.83', 'points': '202711.7', 'seeding': '8', 'leeching': '0', 'hr': '*'}
-2026-10-16 02:00:14 INFO     wecom         sign_in         saving updated access_token to db
-2026-10-16 02:00:14 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1792087214406660784721221], from ip: 47.238.69.178, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_details_report` failed to import dependencies
+Traceback (most recent call last):
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
+    main()
+    └ <function main at 0x7fbc892a7880>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
+    handler.handle_request()
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
+    succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
+                    │                       │    └ 0
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
+    result = request_handler(req, ctx)
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
+
+  File "/code/index.py", line 15, in handler
+    asyncio.run(main())
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
+    └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7fbc88982b60>
+    └ <Handle Task.task_wakeup(<Future finished result=True>)>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=True>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=True>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=True>)>
+
+  File "/code/index.py", line 26, in main
+    flexget.main(['execute'])
+    │       └ <function main at 0x7fbc87ca7ec0>
+    └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
+
+  File "/opt/python/flexget/__init__.py", line 59, in main
+    manager.start()
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
+
+  File "/opt/python/flexget/manager.py", line 381, in start
+    self.initialize()
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
+
+  File "/opt/python/flexget/manager.py", line 225, in initialize
+    plugin.load_plugins(
+    │      └ <function load_plugins at 0x7fbc867a3740>
+    └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
+
+  File "/opt/python/flexget/plugin.py", line 541, in load_plugins
+    _load_plugins_from_dirs(extra_plugins)
+    │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
+
+  File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
+    _import_plugin(module_name, plugin_path)
+    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_details_report.py')
+    │              └ 'flexget.plugins.tests.unit.test_details_report'
+    └ <function _import_plugin at 0x7fbc867a34c0>
+
+> File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
+    import_module(module_name)
+    │             └ 'flexget.plugins.tests.unit.test_details_report'
+    └ <function import_module at 0x7fbc892f8a40>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'flexget.plugins.tests.unit.test_details_report'
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
+           └ <module '_frozen_importlib' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+
+  File "/tmp/plugins/tests/unit/test_details_report.py", line 1, in <module>
+    import pytest
+
+ModuleNotFoundError: No module named 'pytest'
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_qbittorrent_plugin` failed to import dependencies
+Traceback (most recent call last):
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
+    main()
+    └ <function main at 0x7fbc892a7880>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
+    handler.handle_request()
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
+    succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
+                    │                       │    └ 0
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
+    result = request_handler(req, ctx)
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
+
+  File "/code/index.py", line 15, in handler
+    asyncio.run(main())
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
+    └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7fbc88982b60>
+    └ <Handle Task.task_wakeup(<Future finished result=True>)>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=True>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=True>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=True>)>
+
+  File "/code/index.py", line 26, in main
+    flexget.main(['execute'])
+    │       └ <function main at 0x7fbc87ca7ec0>
+    └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
+
+  File "/opt/python/flexget/__init__.py", line 59, in main
+    manager.start()
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
+
+  File "/opt/python/flexget/manager.py", line 381, in start
+    self.initialize()
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
+
+  File "/opt/python/flexget/manager.py", line 225, in initialize
+    plugin.load_plugins(
+    │      └ <function load_plugins at 0x7fbc867a3740>
+    └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
+
+  File "/opt/python/flexget/plugin.py", line 541, in load_plugins
+    _load_plugins_from_dirs(extra_plugins)
+    │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
+
+  File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
+    _import_plugin(module_name, plugin_path)
+    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_qbittorrent_plugin.py')
+    │              └ 'flexget.plugins.tests.unit.test_qbittorrent_plugin'
+    └ <function _import_plugin at 0x7fbc867a34c0>
+
+> File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
+    import_module(module_name)
+    │             └ 'flexget.plugins.tests.unit.test_qbittorrent_plugin'
+    └ <function import_module at 0x7fbc892f8a40>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'flexget.plugins.tests.unit.test_qbittorrent_plugin'
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
+           └ <module '_frozen_importlib' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+
+  File "/tmp/plugins/tests/unit/test_qbittorrent_plugin.py", line 1, in <module>
+    from ptsites.qbittorrent.operations import QBittorrentOperationsMixin
+
+ModuleNotFoundError: No module named 'ptsites'
+2026-10-17 02:00:10 CRITICAL plugin                        Plugin `flexget.plugins.tests.unit.test_dmhy` failed to import dependencies
+Traceback (most recent call last):
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 631, in <module>
+    main()
+    └ <function main at 0x7fbc892a7880>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 619, in main
+    handler.handle_request()
+    │       └ <function FCHandler.handle_request at 0x7fbc892a6340>
+    └ <__main__.FCHandler object at 0x7fbc894d1430>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 266, in handle_request
+    succeed, resp = execute_request_handler(self.function_type, request_handler, event, ctx)
+                    │                       │    │              │                │      └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+                    │                       │    │              │                └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+                    │                       │    │              └ <function handler at 0x7fbc892a7ba0>
+                    │                       │    └ 0
+                    │                       └ <__main__.FCHandler object at 0x7fbc894d1430>
+                    └ <function execute_request_handler at 0x7fbc892a5da0>
+
+  File "/var/fc/runtime/python3.12/bootstrap.py", line 126, in execute_request_handler
+    result = request_handler(req, ctx)
+             │               │    └ <fc_rapis_context.FCContext object at 0x7fbc8926f110>
+             │               └ b'{"triggerTime":"2026-10-16T18:00:00Z","triggerName":"ptsign","payload":"\xe7\x99\xbb\xe5\xbd\x95\xe6\x88\x90\xe5\x8a\x9f"}'
+             └ <function handler at 0x7fbc892a7ba0>
+
+  File "/code/index.py", line 15, in handler
+    asyncio.run(main())
+    │       │   └ <function main at 0x7fbc87edf100>
+    │       └ <function run at 0x7fbc887c9a80>
+    └ <module 'asyncio' from '/var/fc/lang/python3.12/lib/python3.12/asyncio/__init__.py'>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 194, in run
+    return runner.run(main)
+           │      │   └ <coroutine object main at 0x7fbc86175c40>
+           │      └ <function Runner.run at 0x7fbc887d8d60>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           │    │     │                  └ <Task pending name='Task-1' coro=<main() running at /code/index.py:26> cb=[_run_until_complete_cb() at /var/fc/lang/python3.1...
+           │    │     └ <function BaseEventLoop.run_until_complete at 0x7fbc887d6980>
+           │    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+           └ <asyncio.runners.Runner object at 0x7fbc862ad490>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 674, in run_until_complete
+    self.run_forever()
+    │    └ <function BaseEventLoop.run_forever at 0x7fbc887d68e0>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 641, in run_forever
+    self._run_once()
+    │    └ <function BaseEventLoop._run_once at 0x7fbc887d8720>
+    └ <_UnixSelectorEventLoop running=True closed=False debug=False>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/base_events.py", line 1987, in _run_once
+    handle._run()
+    │      └ <function Handle._run at 0x7fbc88982b60>
+    └ <Handle Task.task_wakeup(<Future finished result=True>)>
+  File "/var/fc/lang/python3.12/lib/python3.12/asyncio/events.py", line 88, in _run
+    self._context.run(self._callback, *self._args)
+    │    │            │    │           │    └ <member '_args' of 'Handle' objects>
+    │    │            │    │           └ <Handle Task.task_wakeup(<Future finished result=True>)>
+    │    │            │    └ <member '_callback' of 'Handle' objects>
+    │    │            └ <Handle Task.task_wakeup(<Future finished result=True>)>
+    │    └ <member '_context' of 'Handle' objects>
+    └ <Handle Task.task_wakeup(<Future finished result=True>)>
+
+  File "/code/index.py", line 26, in main
+    flexget.main(['execute'])
+    │       └ <function main at 0x7fbc87ca7ec0>
+    └ <module 'flexget' from '/opt/python/flexget/__init__.py'>
+
+  File "/opt/python/flexget/__init__.py", line 59, in main
+    manager.start()
+    │       └ <function Manager.start at 0x7fbc85ff7c40>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
+
+  File "/opt/python/flexget/manager.py", line 381, in start
+    self.initialize()
+    │    └ <function Manager.initialize at 0x7fbc85ff79c0>
+    └ <flexget.manager.Manager object at 0x7fbc86172120>
+
+  File "/opt/python/flexget/manager.py", line 225, in initialize
+    plugin.load_plugins(
+    │      └ <function load_plugins at 0x7fbc867a3740>
+    └ <module 'flexget.plugin' from '/opt/python/flexget/plugin.py'>
+
+  File "/opt/python/flexget/plugin.py", line 541, in load_plugins
+    _load_plugins_from_dirs(extra_plugins)
+    │                       └ [PosixPath('/tmp/plugins'), PosixPath('/opt/python/flexget/plugins')]
+    └ <function _load_plugins_from_dirs at 0x7fbc867a3560>
+
+  File "/opt/python/flexget/plugin.py", line 460, in _load_plugins_from_dirs
+    _import_plugin(module_name, plugin_path)
+    │              │            └ PosixPath('/tmp/plugins/tests/unit/test_dmhy.py')
+    │              └ 'flexget.plugins.tests.unit.test_dmhy'
+    └ <function _import_plugin at 0x7fbc867a34c0>
+
+> File "/opt/python/flexget/plugin.py", line 416, in _import_plugin
+    import_module(module_name)
+    │             └ 'flexget.plugins.tests.unit.test_dmhy'
+    └ <function import_module at 0x7fbc892f8a40>
+
+  File "/var/fc/lang/python3.12/lib/python3.12/importlib/__init__.py", line 90, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           │          │           │    │        │        └ 0
+           │          │           │    │        └ None
+           │          │           │    └ 0
+           │          │           └ 'flexget.plugins.tests.unit.test_dmhy'
+           │          └ <function _gcd_import at 0x7fbc894bc0e0>
+           └ <module '_frozen_importlib' (frozen)>
+  File "<frozen importlib._bootstrap>", line 1387, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1360, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1331, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 935, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 995, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+
+  File "/tmp/plugins/tests/unit/test_dmhy.py", line 9, in <module>
+    from ptsites.base.entry import SignInEntry
+
+ModuleNotFoundError: No module named 'ptsites'
+2026-10-17 02:00:14 VERBOSE  task_queue                    There are 1 tasks to execute. Shutdown will commence when they have completed.
+2026-10-17 02:00:14 VERBOSE  details       sign_in         Produced 1 entries.
+2026-10-17 02:00:14 VERBOSE  task          sign_in         ACCEPTED: `m-team 2026-10-17` by accept_all plugin
+2026-10-17 02:00:14 VERBOSE  details       sign_in         Summary - Accepted: 1 (Rejected: 0 Undecided: 0 Failed: 0)
+2026-10-17 02:00:14 INFO     flexget.plugins.ptsites.executor                 m-team 2026-10-17 SUCCESS
+2026-10-17 02:00:14 INFO     flexget.plugins.ptsites.executor                 site_name: m-team, details: {'uploaded': '55106480640969 B', 'downloaded': '3984600601147 B', 'share_ratio': '13.83', 'points': '203058.2', 'seeding': '8', 'leeching': '0', 'hr': '*'}
+2026-10-17 02:00:15 INFO     wecom         sign_in         saving updated access_token to db
+2026-10-17 02:00:15 ERROR    notify_entry  sign_in         {'errcode': 60020, 'errmsg': 'not allow to access from your ip, hint: [1792173615609111622207970], from ip: 47.76.129.117, more info at https://open.work.weixin.qq.com/devtool/query?e=60020'}
